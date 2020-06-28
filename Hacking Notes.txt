@@ -1,0 +1,136 @@
+Eachine EX4
+-----------
+
+Clone of C-FLY Faith (also known as JJRC X12)
+
+OEM model DF806B (4k photo camera + Full HD video).
+
+--------------------------------------------------------------------------------------------
+
+CONNECTOR FROM TOP (BATTERY CONTACT ON RIGHT)
+
++5V 	RED
+DATA-	WHITE
+DATA+   GREEN
+GROUND  BLACK
+
+Exposes a COM port @ 115200 bps and can connect to Mission Planner
+
+5/16/20 10:09:12 : PX4v4 0042003E 424D5015 20353459
+5/16/20 10:09:12 : Frame: QUAD
+5/16/20 10:09:12 : PX4: c4dfb9bf NuttX: 258f2257
+5/16/20 10:09:12 : FLIGHT-DF806B-v1.2-2019.10.29 (36ea946c)
+5/16/20 10:09:11 : GPS 0: detected as u-blox at 57600 baud
+5/16/20 10:09:09 : PreArm: Throttle below Failsafe
+5/16/20 10:09:09 : IMU0 alignment ok
+
+Init FLIGHT-DF806B-v1.2-2019.10.29 (36ea946c)
+
+Free RAM: 71584
+FW Ver: 120
+
+--------------------------------------------------------------------------------------------
+
+5/16/20 10:09:12 : FLIGHT-DF806B-v1.2-2019.10.29 (36ea946c) <- This one works on stock drone (no OF)
+6/26/20 11:35:40 : FLIGHT-DF806B-v0.2-2019.10.18 (36ea946c) <- this one expect Optical Flow connected
+
+--------------------------------------------------------------------------------------------
+
+Connecting PC (172.50.10.182) to Controller 172.50.10.254:
+
+It appears it only allow one connection at time
+
+Port 22: Dropbear sshd protocol 2.0 (root/admin)
+
+root@LEDE:/tmp/sysinfo# cat board_name
+LEDEAR9342P 
+
+(LEDE AR9342P board)
+
+system type             : Atheros AR9342 rev 3
+machine                 : LEDE AR9342P board
+processor               : 0
+cpu model               : MIPS 74Kc V4.12
+BogoMIPS                : 278.93
+wait instruction        : yes
+microsecond timers      : yes
+tlb_entries             : 32
+extra interrupt vector  : yes
+hardware watchpoint     : yes, count: 4, address/irw mask: [0x0ffc, 0x0ffc, 0x0ffb, 0x0ffb]
+isa                     : mips1 mips2 mips32r1 mips32r2
+ASEs implemented        : mips16 dsp dsp2
+shadow register sets    : 1
+kscratch registers      : 0
+package                 : 0
+core                    : 0
+VCED exceptions         : not available
+VCEI exceptions         : not available
+
+Linux version 4.4.163 (frankzhimin@ubuntu) (gcc version 5.4.0 (LEDE GCC 5.4.0 1.2.0) ) #0 Fri Mar 1 12:37:10 2019
+
+Port 23: BusyBox telnetd 1.14.0 or later
+Port 53: DNS
+Port 80: OperWRT Luci nterface for barebone router http (root/admin)
+
+--------------------------------------------------------------------------------------------
+
+Connecting PC (172.50.10.19) to Drone 172.50.10.1:
+
+
+Port 21 (TCP) Stupid-FTPd
+Port 53 (TCP) dnsmasq 2.70
+
+{ "CMD": 0, "PARAM": { "FirmWare": "vA.7.19101201", "platform": "A7-4K-1463-2-16-1-2-00100009-1-101-1-18-106-1-2-1", "pinp_X": 60, "pinp_Y": 6, "region": 32924, "cur_csi": 0, "card_status": 1, "freeSpace": 30246, "usedSpace": 178, "totalSpace": 30424, "ssid": "Drone-9a0142", "band_status": 0, "band_ip": "NULL" }, "RESULT": 0 }
+
+Port 4646 (TCP) On tcp port 4646 from the drone: { “CMD”: 0, “PARAM”: { “FirmWare”: “vA.7.19101201”, “platform”: “A7-4K-1463-2-16-1-2-00100009-1-101-1-18-106-1-2-1”, “pinp_X”: 60, “pinp_Y”: 6, “region”: -1, “cur_csi”: 0, “card_status”: 0, “freeSpace”: 0, “usedSpace”: 0, “totalSpace”: 0, “ssid”: “Drone-9a1327”, “band_status”: 0, “band_ip”: “NULL” }, “RESULT”: 0 }
+Port 5038 (TCP)
+Port 5555 (TCP)
+Port 19200 (TCP) DoorBird video doorbell rtspd:  rtsp://hy_syma:ls155633@172.50.10.1:19200/HYSymaH264VideoSMS
+
+On udp port 10005, I was able to read a message which contained words like “FS_BATT_VOLTAGE” and “TWO_BATT_VOLTAGE”.
+
+On tcp port 10002 and 10003 seems to be an TLS encrypted communication, but I am not sure.
+
+--------------------------------------------------------------------------------------------
+
+The controller and the drone can take only 2 channels 36 (5180Mhz) and 149 (5745Mhz). 
+To change the channel, just press the power button 4 times quickly when the drone is off. 
+The blue LED will start flashing for about a minute and then go out. 
+After re-enabling it will be on the second channel.
+
+--------------------------------------------------------------------------------------------
+
+Stock GPS - GPS + BEIDOU 
+
+$GNTXT,01,01,02,u-blox AG - www.u-blox.com*4E
+$GNTXT,01,01,02,HW UBX-M8130 00080000*61
+$GNTXT,01,01,02,ROM CORE 3.01 (107888)*2B
+$GNTXT,01,01,02,FWVER=SPG 3.01*46
+$GNTXT,01,01,02,PROTVER=18.00*11
+$GNTXT,01,01,02,GPS;GLO;BDS*06
+$GNTXT,01,01,02,QZSS*58
+$GNTXT,01,01,02,GNSS OTP=GPS;BDS*26
+$GNTXT,01,01,02,LLC=FFFFFFFF-FF7F7C6D-FFFF80C8-FFFFFFFF-FFFFFF85*24
+$GNTXT,01,01,02,ANTSUPERV=*22
+$GNTXT,01,01,02,ANTSTATUS=DONTKNOW*2D
+$GNTXT,01,01,02,PF=3FF*4B
+$GNTXT,01,01,00,calib out def win*6D
+
+----------------------------------------------------------------------------------------------------------
+
+M8N - GPS + GLONASS + GALILEO
+
+$GNTXT,01,01,02,u-blox AG - www.u-blox.com*4E
+$GNTXT,01,01,02,HW UBX-M8030 00080000*60
+$GNTXT,01,01,02,ROM CORE 3.01 (107888)*2B
+$GNTXT,01,01,02,FWVER=SPG 3.01*46
+$GNTXT,01,01,02,PROTVER=18.00*11
+$GNTXT,01,01,02,GPS;GLO;GAL;BDS*77
+$GNTXT,01,01,02,SBAS;IMES;QZSS*49
+$GNTXT,01,01,02,GNSS OTP=GPS;GLO*37
+$GNTXT,01,01,02,LLC=FFFFFFFF-FFFFFFFF-FFFFFFFF-FFFFFFFF-FFFFFFFD*2F
+$GNTXT,01,01,02,ANTSUPERV=AC SD PDoS SR*3E
+$GNTXT,01,01,02,ANTSTATUS=DONTKNOW*2D
+$GNTXT,01,01,02,PF=3FF*4B
+
+
