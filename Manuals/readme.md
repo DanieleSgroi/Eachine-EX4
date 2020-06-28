@@ -10,6 +10,8 @@ In Europe channel 36 is restricted for indoor use only with a maximum transmissi
 
 The upper channel 149 can be used according to Short Range Device (SRD) specification for transmissions up to 25mW (14dBm) E.R.P.
 
+![5GHz Wi-Fi](./5GHz-1024x264.png)
+
 According to the FCC test reports, the DF806 transmits with an average RF power of +16 dBm, while the Controller transmits with an average RF power of +20 dBm.
 
 This is sort of chatch "22" for European users: if we want to legally use the drone outdoor, we should select Channel 149 but the drone does not have a means to reduce the transmitted power to the specified limit of 25 mW. Furthermore, controller range will be very limited, if the RF power is reduced to 25 mW. 
