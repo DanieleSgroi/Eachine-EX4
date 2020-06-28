@@ -2,4 +2,14 @@
 
 This repository contains the OEM manuals.
 
-Since this drone Wi-Fi can operate either on Ch. 36 or Ch. 149, are also provided some documents about legal 5 GHz spectrum availability in Europe.
+# The Frequency problem...
+
+DF806B Wi-Fi can operate either on Ch. 36 (5180 MHz) or Ch. 149 (5745 MHz).
+
+In Europe channel 36 is restricted for indoor use only with a maximum transmission power of 200mW (23dBm) E.R.P.
+
+The upper channel 149 can be used according to Short Range Device (SRD) specification for transmissions up to 25mW (14dBm) E.R.P.
+
+This is sort of chatch "22" for European users: if we want to legally use the drone outdoor, we should select Channel 149 but the drone does not have a means to reduce the transmitted power to the specified limit of 25 mW. Furthermore, controller range will be very limited. 
+
+On the other hand, we are legitimate to use the full power only indoor, where range is not an issue...
