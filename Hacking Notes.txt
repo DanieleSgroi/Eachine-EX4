@@ -5,6 +5,14 @@ Clone of C-FLY Faith (also known as JJRC X12)
 
 OEM model DF806B (4k photo camera + Full HD video).
 
+----------------------------------------------------------------------------------------------------------
+
+BATTERY PACK
+
+It is a 4,35V LiPo HV with a maximum charging voltage of 13.05 Volts (3S).
+
+Requires a special charger to make profit of the full voltage range.
+
 --------------------------------------------------------------------------------------------
 
 CONNECTOR FROM TOP (BATTERY CONTACT ON RIGHT)
@@ -100,7 +108,11 @@ After re-enabling it will be on the second channel.
 
 --------------------------------------------------------------------------------------------
 
-Stock GPS - GPS + BEIDOU 
+Stock GPS - GPS + BEIDOU + GLONASS + QZSS + SBAS
+
+Very thin, use an original U-Blox chipset but customized for Far East applications.
+
+Galileo is not supported supported, even if firmware is latest 3.01.
 
 $GNTXT,01,01,02,u-blox AG - www.u-blox.com*4E
 $GNTXT,01,01,02,HW UBX-M8130 00080000*61
@@ -118,7 +130,15 @@ $GNTXT,01,01,00,calib out def win*6D
 
 ----------------------------------------------------------------------------------------------------------
 
-M8N - GPS + GLONASS + GALILEO
+M8N - GPS + GLONASS + GALILEO + BEIDOU + QZSS + SBAS
+
+GG-1802 module fits the internal space, even if is thicker. 
+
+This can be set to operate with GPS + GLONASS + GALILEO and take benefit from the increased number of satellites.
+
+The drone becomes ready to fly faster and also position accuracy is increased. 
+
+Not surprisingly, enabling SBAS provides poor results when compared to multi-constellation solution.
 
 $GNTXT,01,01,02,u-blox AG - www.u-blox.com*4E
 $GNTXT,01,01,02,HW UBX-M8030 00080000*60
