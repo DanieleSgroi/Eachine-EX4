@@ -3,7 +3,7 @@ Collection of information about Eachine EX4 "Aurora" Quadcopter.
 
 This drone is a rebranded C-FLY Faith unit, also sold as JJRC X12.
 
-![Aurora](./Aurora.jpg)
+![Aurora](./Aurora.jpg) 
 
 The unit has an internal name of DF806. It exist in two versions: 
 
