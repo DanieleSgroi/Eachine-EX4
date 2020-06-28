@@ -4,7 +4,7 @@ This repository contains the OEM manuals.
 
 # The Frequency problem...
 
-DF806B Wi-Fi can operate either on Ch. 36 (5180 MHz) or Ch. 149 (5745 MHz).
+DF806B Wi-Fi can operate either on Ch. 36 (5180 MHz) or Ch. 149 (5745 MHz) with badwidth allocation of 20 MHz according to IEEE 803.11n standard.
 
 In Europe channel 36 is restricted for indoor use only with a maximum transmission power of 200mW (23dBm) E.R.P.
 
