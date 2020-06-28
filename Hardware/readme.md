@@ -18,6 +18,6 @@ The BOOT 0 pin shall be tied to +3V3 at boot in order to put the STM32F405 CPU i
 
 # Spare Serial Port
 
-On top side, close to the power switch connector (see EX4-TOP-MB), there is an unpopulated area for the Optical Flow connector (not installed on DF806B).
+On top side, close to the power switch connector (see EX4-TOP-MB), there is an unpopulated area for the Optical Flow connector (4 pin, not installed on DF806B).
 
 This is suspected to be a spare serial port and may be useful for further expansions (e.g. 3DR telemetry, Airborne Mission Computer, etc.).
