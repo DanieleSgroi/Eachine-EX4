@@ -10,6 +10,22 @@ In Europe channel 36 is restricted for indoor use only with a maximum transmissi
 
 The upper channel 149 can be used according to Short Range Device (SRD) specification for transmissions up to 25mW (14dBm) E.R.P.
 
+According to the FCC test reports, the DF806 transmits with an average RF power of +16 dBm, while the Controller transmits with an average RF power of +20 dBm.
+
 This is sort of chatch "22" for European users: if we want to legally use the drone outdoor, we should select Channel 149 but the drone does not have a means to reduce the transmitted power to the specified limit of 25 mW. Furthermore, controller range will be very limited. 
 
 On the other hand, we are legitimate to use the full power only indoor, where range is not an issue...
+
+This shall be further investigated, maybe with real RF power measures on an European unit. 
+
+As final note, my Eachine EX4 box includes the CE marking that should guarantee compliances to the European rules...
+
+# How to switch the operating frequency
+
+To change the drone channel, press the power button 4 times quickly when the drone is off.
+
+The blue LED will start flashing for about a minute and then go out.
+
+After re-enabling it will be on the other channel.
+
+The controller should be able to automatically bind to the new channel.
