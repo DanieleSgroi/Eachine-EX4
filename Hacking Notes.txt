@@ -39,14 +39,14 @@ FW Ver: 120
 
 --------------------------------------------------------------------------------------------
 
-5/16/20 10:09:12 : FLIGHT-DF806B-v1.2-2019.10.29 (36ea946c) <- This one works on stock drone (no OF)
-6/26/20 11:35:40 : FLIGHT-DF806B-v0.2-2019.10.18 (36ea946c) <- this one expect Optical Flow connected
+FLIGHT-DF806B-v1.2-2019.10.29 (36ea946c) <- This one works on stock drone (no OF)
+FLIGHT-DF806B-v0.2-2019.10.18 (36ea946c) <- this one expect Optical Flow connected
 
 --------------------------------------------------------------------------------------------
 
-Connecting PC (172.50.10.182) to Controller 172.50.10.254:
+Connecting PC (172.50.10.182) to Controller-XXXXX 172.50.10.254:
 
-It appears it only allow one connection at time
+It appears it only allow one connection at time. The controller runs a stripped-down OpenWRT distribution, with limited Lede interface.
 
 Port 22: Dropbear sshd protocol 2.0 (root/admin)
 
@@ -82,8 +82,7 @@ Port 80: OperWRT Luci nterface for barebone router http (root/admin)
 
 --------------------------------------------------------------------------------------------
 
-Connecting PC (172.50.10.19) to Drone 172.50.10.1:
-
+Connecting PC (172.50.10.19) to Drone-XXXXX 172.50.10.1:
 
 Port 21 (TCP) Stupid-FTPd
 Port 53 (TCP) dnsmasq 2.70
@@ -112,7 +111,7 @@ Stock GPS - GPS + BEIDOU + GLONASS + QZSS + SBAS
 
 Very thin, use an original U-Blox chipset but customized for Far East applications.
 
-Galileo is not supported supported, even if firmware is latest 3.01.
+Galileo is not supported, even if firmware is latest 3.01.
 
 $GNTXT,01,01,02,u-blox AG - www.u-blox.com*4E
 $GNTXT,01,01,02,HW UBX-M8130 00080000*61
@@ -138,7 +137,7 @@ This can be set to operate with GPS + GLONASS + GALILEO and take benefit from th
 
 The drone becomes ready to fly faster and also position accuracy is increased. 
 
-Not surprisingly, enabling SBAS provides poor results when compared to multi-constellation solution.
+Not surprisingly, enabling SBAS forces GPS only and provides poor accuracy when compared to multi-constellation solution.
 
 $GNTXT,01,01,02,u-blox AG - www.u-blox.com*4E
 $GNTXT,01,01,02,HW UBX-M8030 00080000*60
@@ -152,5 +151,3 @@ $GNTXT,01,01,02,LLC=FFFFFFFF-FFFFFFFF-FFFFFFFF-FFFFFFFF-FFFFFFFD*2F
 $GNTXT,01,01,02,ANTSUPERV=AC SD PDoS SR*3E
 $GNTXT,01,01,02,ANTSTATUS=DONTKNOW*2D
 $GNTXT,01,01,02,PF=3FF*4B
-
-
