@@ -8,7 +8,7 @@ DF806B Wi-Fi can operate either on Ch. 36 (5180 MHz) or Ch. 149 (5745 MHz).
 
 In Europe channel 36 is restricted for indoor use only with a maximum transmission power of 200mW (23dBm) E.R.P.
 
-The upper channel 149 can be used according to Short Range Device (SRD) specification for transmissions up to 25mW (14dBm) E.R.P.
+The upper channel 149 can be used outdoor according to Short Range Device (SRD) specification for transmissions up to 25mW (14dBm) E.R.P.
 
 ![5GHz Wi-Fi](./5GHz-1024x264.png)
 
