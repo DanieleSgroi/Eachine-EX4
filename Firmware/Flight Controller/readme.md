@@ -2,7 +2,7 @@
 
 At least, two firmware revisions are known to exist for the DF806B Flight Controller Board.
 
-- V0.2 includes code for an unknown Optical Flow sensor, not installed on production drones and thus not functional if loaded on a stock unit.
+- V0.2 includes code for an unknown Optical Flow sensor, not installed on production drones and not functional if loaded on a stock unit.
 - V1.2 does not need the Optical Flow sensor, and can be loaded on stock units
 
 # Tools
