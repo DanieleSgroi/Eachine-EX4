@@ -12,8 +12,6 @@ The unit has an internal name of DF806. It exist in two versions:
 
 This repository references the DF806B (green PCB) revision only.
 
-![Green PCB](./Hardware/EX4-BOT-MB.jpg)
-
 # Reference
 Discussion on Ardupilot forum: https://discuss.ardupilot.org/t/c-fly-faith-jjrc-x12-ex4-changing-parameters-and-or-connecting-mission-planner-etc/53245
 
