@@ -1,5 +1,5 @@
 # Eachine-EX4
-Collection of information about Eachine EX4 "Aurora" Quadcopter.
+Collection of information about Eachine EX4 Quadcopter.
 
 This drone is a rebranded C-FLY Faith unit, also sold as JJRC X12.
 
