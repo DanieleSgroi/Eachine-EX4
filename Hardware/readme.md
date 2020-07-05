@@ -37,7 +37,7 @@ I've modified a stoch charger to allow operation with an Imax B6 charger, also m
 
 ![B6](./IMAX-B6.jpg) 
 
-The copper layer helps to reduce the thermal conductivity between the battery pack and the embedded LM35 temperature sensor, to allow monitoring of temperature during the charge process.
+The copper layer helps to improve the thermal conductivity between the battery pack and the embedded LM35 temperature sensor, to allow monitoring of temperature during the charge process.
 
 With this setup I can fast charge, balace and discharge to storage the batty pack. Hope to increase battery life!
 
