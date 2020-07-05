@@ -28,3 +28,12 @@ On top side, close to the power switch connector, there is an unpopulated area f
 This is suspected to be a spare serial port and may be useful for further expansions (e.g. 3DR telemetry, Airborne Mission Computer, etc.).
 
 TO BE FURTHER INVESTIGATED.
+
+# BATTERIES
+
+EX4 batteries are LiHV type and can be charged up to 4.35 Volts per cell. Pack configuration is 3S, so up to 13.05 Volts. 
+
+I've modified a stoch charger to allow operation with an Imax B6 charger, also modified with cheali-charger firmware: https://github.com/stawel/cheali-charger to support LiHV cells.
+
+With this setup I can fast charge, balace and discharge to storage the batty pack. Hope to increase baterry life!
+
