@@ -35,5 +35,9 @@ EX4 batteries are LiHV type and can be charged up to 4.35 Volts per cell. Pack c
 
 I've modified a stoch charger to allow operation with an Imax B6 charger, also modified with cheali-charger firmware: https://github.com/stawel/cheali-charger to support LiHV cells.
 
+![B6](./IMAX-B6.jpg) 
+
+The copper layer halps to reduce the thermal conductivity between the battery pack and the embedded LM35 temperature sensor, to allow monitoring of temperature during the charge process.
+
 With this setup I can fast charge, balace and discharge to storage the batty pack. Hope to increase baterry life!
 
